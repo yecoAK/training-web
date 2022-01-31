@@ -1,3 +1,1 @@
--Develop a website according to the following specifications:
--Use the materials and specifications from the Run Forrest, Run!
--You must use Mustache.
+* Solve this [CodeWars Kata test](https://www.codewars.com/kata/5a353a478f27f244a1000076/train/javascript) using your asynchronous abilities.

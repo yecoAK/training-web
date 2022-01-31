@@ -1,7 +1,12 @@
--You must use Promises to request the data for popular the company grid.
--Use the materials and specifications from the Run Forrest, Run! Exercise.
--You must create a fake server using https://my-json-server.typicode.com/ and consume the information of the agencies from there.
--The json to consume is the following http://akurey.com/trainings/companies.json
--The grid within the website must be populated with the information from the JSON.
--The search field within the "hero image" must be used to filter the grid elements using only the name of the company.
--The search must be "triggered" at the moment the user presses Enter or presses the image of the "magnifying glass".
+Now that you’ve read the JavaScript guide, re-visited, and learned new design patterns, and discovered the JS principles, you’re going to do a practical exercise.  This exercise is related to web design, the anime of One Piece is huge. 
+
+* Develop a JS call to consume the OnePieceInformation.json.
+* Get the JSON from this URL.
+* Read the JSON and create a list of objects in memory.
+* Order the list by alphabetical order in each Category. Use the most efficient way.
+* Our recommendation is to test your API using Postman or a similar tool.
+* Call this endpoint once while the page is rendering.
+* The goal is to populate the following sections of the homepage:
+- Characters, by showing the first 4 elements of the list.
+- Islands, by showing the first 3 elements of the list.
+- Mist Objects, by showing the first 4 elements of the list.

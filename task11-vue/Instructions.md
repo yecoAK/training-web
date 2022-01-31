@@ -1,3 +1,1 @@
-Usando los mismos elementos crea tu Whack-a-Mole usando hooks en ReactJS. 
-Agrega las funcionalidades mencionadas anteriormente.
-Agrega Redux para manejar la tabla de puntuaciones.
+Build the website from 2.8.2. Task # 3 - One Piece Website using what you learn on Vue. 
