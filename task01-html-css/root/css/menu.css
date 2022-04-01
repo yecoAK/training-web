@@ -1,0 +1,50 @@
+
+.menuPrincipal ul, .menuPrincipal li {
+    margin: 0;
+    padding: 0;
+}
+.menuPrincipal ul {
+    /*background: gray;*/
+    list-style: none;
+    width: 100%;
+}
+.menuPrincipal li {
+    /*float: left;*/
+    display: inline-block;
+    width:auto;
+}
+.menuPrincipal a {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #575757;
+    display: block;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+.menuPrincipal li:hover a {
+    color: #085179;
+}
+
+.menuPrincipal.active{
+    color: #0C75AF
+}
+
+.language{
+    position: static;
+    width: 90px;
+    height: 31px;
+}
+
+.language.active{
+    background: #ECECEC;
+}
+
+.flaglanguage{
+    margin-top: 12px;
+    position: relative;
+    text-align: end;
+}
