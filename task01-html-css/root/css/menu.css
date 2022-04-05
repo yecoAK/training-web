@@ -4,24 +4,22 @@
     padding: 0;
 }
 .menuPrincipal ul {
-    /*background: gray;*/
     list-style: none;
-    width: 100%;
+    /*width: 100%;*/
 }
 .menuPrincipal li {
-    /*float: left;*/
     display: inline-block;
-    width:auto;
+    /*width:auto;*/
 }
 .menuPrincipal a {
     font-family: 'Roboto Slab', serif;
-    font-style: normal;
+    /*font-style: normal;*/
     font-weight: 700;
     font-size: 18px;
-    line-height: 24px;
+    /*line-height: 24px;*/
     letter-spacing: 0.1px;
     color: #575757;
-    display: block;
+    /*display: block;*/
     padding: 10px 25px;
     text-decoration: none;
 }
