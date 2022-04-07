@@ -21,13 +21,17 @@
 }
 
 .boxSipnosis {
-    font-size: 12px;
+    font-size: 16px;
     border-right: rgba(145, 201, 238, 0.3) 1px solid;
     border-bottom: rgba(145, 201, 238, 0.3) 1px solid;
     border-top: rgba(145, 201, 238, 0.3) 1px solid;
     left: -12px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(145, 201, 238, 0.3);
+}
+
+.mainImg {
+    width: calc(100vh);
 }
 
 .islandsText {
@@ -111,14 +115,14 @@
     }
 
     .boxSipnosis {
-        font-size: 9px;
+        font-size: 11px;
     }
 }
 
 
 @media (min-width: 992px) {
     .boxSipnosis {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .textDivImg {
