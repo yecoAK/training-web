@@ -94,6 +94,22 @@
     margin-left: auto;
 }
 
+.islandsTextHeader {
+    font-family: 'Roboto Slab', serif;
+}
+
+@media (min-width: 320px) {
+    .islandsTextHeader {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 420px) {
+    .islandsTextHeader {
+        font-size: 13px;
+    }
+}
+
 @media (min-width: 576px) {
     .textGeneral {
         font-size: 12px;
@@ -107,6 +123,10 @@
         font-size: 13px;
     }
 
+    .islandsTextHeader {
+        font-size: 13px;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -117,6 +137,14 @@
     .boxSipnosis {
         font-size: 11px;
     }
+
+    .textDivImg {
+        font-size: 13px;
+    }
+
+    .islandsTextHeader {
+        font-size: 13px;
+    }
 }
 
 
@@ -126,7 +154,11 @@
     }
 
     .textDivImg {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .islandsTextHeader {
+        font-size: 18px;
     }
 }
 
@@ -142,6 +174,10 @@
     }
 
     .textDivImg {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .islandsTextHeader {
+        font-size: 18px;
     }
 }
