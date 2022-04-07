@@ -1,0 +1,18 @@
+@import "fonts.css";
+@import "menu.css";
+@import "utility.css";
+@import "index.css";
+@import "footer.css";
+
+
+body {
+    font-family: 'Roboto', serif;
+}
+
+a {
+    color: #0C75AF;
+    text-decoration: none
+}
+a:hover{
+    text-decoration: underline;
+}

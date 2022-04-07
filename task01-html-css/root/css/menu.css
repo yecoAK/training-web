@@ -1,0 +1,172 @@
+ul {
+    list-style: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    /*left: calc(12%);*/
+    /*left: 0;*/
+    /*right: 0;*/
+    text-align: center;
+    justify-content: center;
+}
+
+.nav ul{
+    padding-left: 5px;
+}
+
+.menu a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    color: #575757;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li:hover a {
+    color: #085179;
+
+}
+
+.menu.active {
+    color: #0C75AF
+}
+
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+    position: absolute;
+}
+
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+    /*position: absolute;*/
+}
+
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        margin-top: 0;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+        color: grey;
+
+    }
+
+    .hamb {
+        display: none;
+    }
+
+}
+
+
+.language {
+    position: static;
+    width: 60px;
+    height: 31px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.language.active {
+    background: #ECECEC;
+}
+
+.languageMovile {
+    height: 31px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.languageMovile.active {
+    background: #ECECEC;
+}
+
+.flaglanguage {
+    margin-top: 12px;
+    position: relative;
+    text-align: end;
+}
+
