@@ -20,7 +20,7 @@ const changed = require('gulp-changed');
 const browsersync = require('browser-sync').create();
 
 function clear() {
-    return src('./assets/*', {
+    return src('./dist/*', {
         read: false
     })
         .pipe(clean());
@@ -38,7 +38,7 @@ function js() {
         .pipe(rename({
             extname: '.min.js'
         }))
-        .pipe(dest('./assets/js/'))
+        .pipe(dest('./dist/js/'))
         .pipe(browsersync.stream());
 }
 
@@ -57,7 +57,7 @@ function css() {
             extname: '.min.css'
         }))
         .pipe(cssnano())
-        .pipe(dest('./assets/css/'))
+        .pipe(dest('./dist/css/'))
         .pipe(browsersync.stream());
 }
 
@@ -66,23 +66,23 @@ function css() {
 function img() {
     return src('./src/img/**/*{jpg,png}')
         .pipe(imagemin())
-        .pipe(dest('./assets/img'));
+        .pipe(dest('./dist/img'));
 }
 
 function fonts() {
     return src('./src/font/**/*.{eot,svg,ttf,woff,woff2}')
-        .pipe(dest('assets/font'));
+        .pipe(dest('dist/font'));
 }
 
 function html() {
     return src('./src/**/*.html')
-        .pipe(dest('./assets/'))
+        .pipe(dest('./dist/'))
         .pipe(browsersync.stream());
 }
 
 function lib() {
     return src('./src/lib/**/*.{js,css}')
-        .pipe(dest('./assets/lib/'));
+        .pipe(dest('./dist/lib/'));
 }
 
 // Watch files
@@ -101,7 +101,7 @@ function watchFiles() {
 function browserSync() {
     browsersync.init({
         server: {
-            baseDir: './assets'
+            baseDir: './dist'
         },
         port: 3000
     });
