@@ -26,7 +26,7 @@
                 </a>
 
                 <nav class="nav">
-                    <ul class="menu" >
+                    <ul class="menu">
                         <li><a href="index.html" class="menu active">Home</a></li>
                         <li><a href="characters.html">Character</a></li>
                         <li><a href="islands.html">Inslands</a></li>
@@ -70,7 +70,7 @@
                      src="">
             </div>
             <div class="col-12 col-sm-12 col-md-3 col-xl-3 col-lg-3 boxSipnosis d-none d-sm-none d-md-block">
-                <h5>Sipnosis</h5>
+                <h5><strong>Sipnosis</strong></h5>
                 <p>Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.</p>
                 <p> It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well
                     as the home island of his father, Monkey D. Dragon.
@@ -85,18 +85,38 @@
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 col-xl-3 col-lg-3 d-block d-sm-block d-md-none">
-                <h5>Sipnosis</h5>
-                <p>Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.</p>
-                <p> It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well
-                    as the home island of his father, Monkey D. Dragon.
-                </p>
+                <div class="row">
+                    <div class="col-12">
+                        <!--                        d-flex flex-column justify-content-center" style="  justify-content: center;"-->
+                        <div class="boxSipnosisMovil">
+                            <h5><strong>Sipnosis</strong></h5>
+                            <p>Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
+                                <span id="dots">...</span>
+                                <span id="more">
+                                    This is also the adopted home of Portgas D. Ace after the death of his mother and the home of Sabo
+                                        and his family.
+                                    Reverse Mountain is an extremely tall mountain at one of the points where the four Blues meet and is
+                                        one of the two known entrances to the Grand Line.
+                                    It is located in the Red Line and is the geographical antipode of Mary Geoise.
+                                </span>
+                            </p>
+                            <hr>
+                            <div class="row text-center">
+                                <p onclick="myFunction()" class="boxSipnosisMovilBtn m-0" id="myBtn" href="none">Read
+                                    All</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </div>
 
 
-    <div class="mt-5"></div>
+    <div class="mt-5 d-none d-sm-none d-md-block"></div>
     <input type="text" class="form-control iconSearchInput" placeholder="Search Characters, Islands or Objects"
            aria-label="Search"
            aria-describedby="addon-wrapping">
@@ -285,5 +305,7 @@
     </footer>
 
 </div>
+
+<script src="js/bundle.min.js"></script>
 </body>
 </html>
