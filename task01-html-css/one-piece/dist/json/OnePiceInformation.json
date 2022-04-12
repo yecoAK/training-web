@@ -53,7 +53,7 @@
                 "Gomu Gomu no Mi"
             ],
             "band": "Straw Hat Pirates",
-            "img": "path/monkeydluffy.svg"
+            "img": "img/character/Rectangle4.png"
         },
         {
             "name": "Roronoa Zoro",
@@ -63,7 +63,7 @@
                 "Sworddman"
             ],
             "band": "Straw Hat Pirates",
-            "img": "path/zoro.svg"
+            "img": "img/character/Rectangle8.png"
         },
         {
             "name": "Portgas D .Ace",
@@ -73,7 +73,7 @@
                 "Higan"
             ],
             "band": "White beard",
-            "img": "path/ace.svg"
+            "img": "img/character/Rectangle6.png"
         },
         {
             "name": "Nico Robin",
@@ -83,7 +83,7 @@
                 "Miscellaneous Skills"
             ],
             "band": "Mugiwara",
-            "img": "path/nico.svg"
+            "img": "img/character/Rectangle10.png"
         },
         {
             "name": "Red-Haired Shanks",
@@ -93,14 +93,14 @@
                 "Sworddman"
             ],
             "band": "Red Hair Pirates",
-            "img": "path/placeholder.svg"
+            "img": "img/character/Rectangle4.png"
         },
         {
             "name": "Gol D. Roger",
             "description": "Ace was adopted by Monkey D. Garp, as had been requested by Roger before his execution. Ace was the 2nd division commander of the Whitebeard Pirates.",
             "skills": ["Haki"],
             "band": "Roger Pirates",
-            "img": "path/placeholder.svg"
+            "img": "img/character/Rectangle8.png"
         }
 
     ],
