@@ -92,8 +92,8 @@ function json() {
 // Watch files
 
 function watchFiles() {
-    watch('./src/scss/*', css);
-    watch('./src/js/*', js);
+    watch('./src/scss/**/*', css);
+    watch('./src/js/**/*.js', js);
     watch('./src/img/*', img);
     watch('./src/font/*', fonts);
     watch('./src/*.html', html);

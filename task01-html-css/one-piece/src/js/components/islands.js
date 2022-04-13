@@ -29,6 +29,8 @@ islandTemplate.innerHTML = `
 `;
 
 class islands extends HTMLElement {
+    init;
+
     constructor() {
         super();
         const countElementsWeb = 3;
@@ -45,12 +47,18 @@ class islands extends HTMLElement {
     }
 
     createTemplate(countElementsWeb, countElementsMovil) {
-        const init = this.attachShadow({mode: 'closed'});
-        this.addStyle(init);
+        this.init = this.attachShadow({mode: 'closed'});
+        this.addStyle(this.init);
 
-        //read data
-        json().readData().then(response => {
-                const islands = json().getType('islands', response);
+        let islands = getTypeData.islands;
+        this.createTemplateGeneral(countElementsWeb, countElementsMovil, this.init, islands).then(response => {
+            this.init = response;
+        });
+    }
+
+    async createTemplateGeneral(countElementsWeb, countElementsMovil, init, getTypeData) {
+        await json().readData().then(response => {
+                const islands = json().getType(getTypeData, response);
 
                 islands.forEach(function (c) {
                     //validate number of element
@@ -81,7 +89,9 @@ class islands extends HTMLElement {
         ).catch(function (error) {
             console.log('Request failed', error);
         });
+        return init;
     }
+
 }
 
 customElements.define('islands-component', islands);

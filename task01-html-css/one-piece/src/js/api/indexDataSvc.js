@@ -1,3 +1,9 @@
+const getTypeData = {
+    characters: 'characters',
+    islands: 'islands',
+    mysticObjects: 'mysticObjects'
+};
+
 function json() {
     var json = '../json/OnePiceInformation.json';
 
@@ -19,13 +25,13 @@ function json() {
         },
         getType: function (type, response) {
             switch (type) {
-                case 'characters':
+                case getTypeData.characters:
                     response.characters.sort((a, b) => a.name.localeCompare(b.name));
                     return response.characters;
-                case 'islands':
+                case getTypeData.islands:
                     response.islands.sort((a, b) => a.name.localeCompare(b.name));
                     return response.islands;
-                case 'mysticObjects':
+                case getTypeData.mysticObjects:
                     response.mysticObjects.sort((a, b) => a.name.localeCompare(b.name));
                     return response.mysticObjects;
                 default:

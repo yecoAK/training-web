@@ -27,12 +27,23 @@ characterTemplate.innerHTML = `
 
 
 class Character extends HTMLElement {
+    init;
 
     constructor() {
         super();
         const countElementsWeb = 4;
         const countElementsMovil = 2;
         this.createTemplate(countElementsWeb, countElementsMovil);
+    }
+
+    createTemplate(countElementsWeb, countElementsMovil) {
+        this.init = this.attachShadow({mode: 'closed'});
+        this.addStyle(this.init);
+
+        let characters = getTypeData.characters;
+        this.createTemplateGeneral(countElementsWeb, countElementsMovil, this.init, characters).then(response => {
+            this.init = response;
+        });
     }
 
     addStyle(init) {
@@ -43,14 +54,9 @@ class Character extends HTMLElement {
         init.appendChild(main.cloneNode());
     }
 
-    createTemplate(countElementsWeb, countElementsMovil) {
-        //create element
-        const init = this.attachShadow({mode: 'closed'});
-        this.addStyle(init);
-
-        //read data
-        json().readData().then(response => {
-                const characters = json().getType('characters', response);
+    async createTemplateGeneral(countElementsWeb, countElementsMovil, init, getTypeData) {
+        await json().readData().then(response => {
+                const characters = json().getType(getTypeData, response);
 
                 characters.forEach(function (c) {
                     //validate number of element
@@ -80,6 +86,7 @@ class Character extends HTMLElement {
         ).catch(function (error) {
             console.log('Request failed', error);
         });
+        return init;
     }
 }
 

@@ -31,11 +31,24 @@ mistObjectTemplate.innerHTML = `
 `;
 
 class mistObject extends HTMLElement {
+    init;
+
     constructor() {
         super();
         const countElementsWeb = 4;
         const countElementsMovil = 3;
         this.createTemplate(countElementsWeb, countElementsMovil);
+    }
+
+    createTemplate(countElementsWeb, countElementsMovil) {
+        //create element
+        this.init = this.attachShadow({mode: 'closed'});
+        this.addStyle(this.init);
+
+        let mysticObjects = getTypeData.mysticObjects;
+        this.createTemplateGeneral(countElementsWeb, countElementsMovil, this.init, mysticObjects).then(response => {
+            this.init = response;
+        });
     }
 
     addStyle(init) {
@@ -46,45 +59,42 @@ class mistObject extends HTMLElement {
         init.appendChild(main.cloneNode());
     }
 
-    createTemplate(countElementsWeb, countElementsMovil) {
-        //create element
-        const init = this.attachShadow({mode: 'closed'});
-        this.addStyle(init);
+    async createTemplateGeneral(countElementsWeb, countElementsMovil, init, getTypeData) {
+        await json().readData().then(response => {
+            const mysticObjects = json().getType(getTypeData, response);
 
-        //read data
-        json().readData().then(response => {
-                const mysticObjects = json().getType('mysticObjects', response);
+            mysticObjects.forEach(function (c) {
+                //validate number of element
+                if (countElementsWeb <= 0) {
+                    return;
+                }
+                countElementsWeb--;
 
-                mysticObjects.forEach(function (c) {
-                    //validate number of element
-                    if (countElementsWeb <= 0) {
-                        return;
-                    }
-                    countElementsWeb--;
+                //responsive class
+                if (countElementsMovil <= 0) {
+                    mistObjectTemplate.content.getElementById("divMain").setAttribute("class", "col-12 col-md-6 col-xl-6 col-sm-6 col-lg-6 position-relative d-none d-sm-block d-md-block");
+                } else {
+                    mistObjectTemplate.content.getElementById("divMain").setAttribute("class", "col-12 col-sm-6 col-md-6 col-xl-6 col-lg-6 position-relative");
+                }
+                countElementsMovil--;
 
-                    //responsive class
-                    if (countElementsMovil <= 0) {
-                        mistObjectTemplate.content.getElementById("divMain").setAttribute("class", "col-12 col-md-6 col-xl-6 col-sm-6 col-lg-6 position-relative d-none d-sm-block d-md-block");
-                    } else {
-                        mistObjectTemplate.content.getElementById("divMain").setAttribute("class", "col-12 col-sm-6 col-md-6 col-xl-6 col-lg-6 position-relative");
-                    }
-                    countElementsMovil--;
-
-                    //edit and add element
-                    mistObjectTemplate.content.getElementById("name").textContent = c.name;
-                    mistObjectTemplate.content.getElementById("img").srcset = c.img;
-                    mistObjectTemplate.content.getElementById("desc").textContent = c.description;
-                    mistObjectListTemplate.content.getElementById("list").appendChild(mistObjectTemplate.content.cloneNode(true));
-                });
+                //edit and add element
+                mistObjectTemplate.content.getElementById("name").textContent = c.name;
+                mistObjectTemplate.content.getElementById("img").srcset = c.img;
+                mistObjectTemplate.content.getElementById("desc").textContent = c.description;
+                mistObjectListTemplate.content.getElementById("list").appendChild(mistObjectTemplate.content.cloneNode(true));
+            });
 
 
-                //add template to customElements
-                init.appendChild(mistObjectListTemplate.content);
+            //add template to customElements
+            init.appendChild(mistObjectListTemplate.content);
             }
         ).catch(function (error) {
             console.log('Request failed', error);
         });
+        return init;
     }
+
 }
 
 customElements.define('mistobject-component', mistObject);
