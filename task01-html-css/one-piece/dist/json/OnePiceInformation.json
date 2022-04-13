@@ -108,30 +108,30 @@
         {
             "name": "Poneglyph",
             "origen": "Wano",
-            "description": "The Poneglyphs are large, mysterious steles with historical knowledge inscribed on them in an ancient script. They are scattered among the islands across the world, and it is said that the only person left in the world who can read them is Nico Robin.",
+            "description": "The Poneglyphs are large, mysterious steles with historical knowledge inscribed on them in an ancient script. They are scattered among the islands across the world.",
             "location": "Worldwide",
-            "img": "path/object.svg"
+            "img": "img/mistObjects/Rectangle12_3.png"
         },
         {
             "name": "Log Pose",
             "origen": "Unknown",
             "description": "The standard Log Pose is a bracelet with a glass orb sitting on top, and a needle floating inside the middle of that orb suspended from the top by a thin piece of wire.",
             "location": "Worldwide",
-            "img": "path/object.svg"
+            "img": "img/mistObjects/Rectangle12_3.png"
         },
         {
             "name": "Den Den Mushi",
             "origen": "Unknown",
             "description": "Den Den Mushi have the mysterious ability to telepathically communicate with each other over vast distances, apparently through electronic signals; they can also perfectly mimic human speech, even imitating people voices.",
             "location": "Worldwide",
-            "img": "path/object.svg"
+            "img": "img/mistObjects/Rectangle12_3.png"
         },
         {
             "name": "Dials",
             "origen": "Skypiea",
-            "description": "Dials are strange, mysterious devices made from the remains of particular shellfish, which have the ability to store energy and matter. The shellfish remains are gathered from the shallows near the shore of the White-White Sea. Though they originate from Skypiea, some of them can reach and be used in the lower seas.",
+            "description": "Dials are strange, mysterious devices made from the remains of particular shellfish, which have the ability to store energy and matter. The shellfish remains are gathered from the shallows near the shore of the White-White Sea.",
             "location": "Worldwide",
-            "img": "path/object.svg"
+            "img": "img/mistObjects/Rectangle12_3.png"
         }
 
     ]
