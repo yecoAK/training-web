@@ -6,7 +6,7 @@ characterListTemplate.innerHTML = `
             <div class="col-6 text-start"><h4>Character</h4></div>
             <div class="col-6 text-end"><a href="characters.html">See all</a></div>
         </div>
-        <div class="row" id="listCharacter">
+        <div class="row" id="list">
                 <!--LIST OF ALL CHARACTER-->
         </div>
     </div>
@@ -15,12 +15,12 @@ characterListTemplate.innerHTML = `
 const characterTemplate = document.createElement('template');
 
 characterTemplate.innerHTML = ` 
-    <div class="col-6 col-sm-3 col-md-3 col-xl-3 col-lg-3 position-relative d-none d-sm-block d-md-block">
+    <div id="divMain" class="">
         <div class="characterText textGeneral d-flex flex-column justify-content-center">
             <div id="name"></div>
         </div>
         <div class="pickgradient">
-            <img id="imgCharacter" alt="Rectangle10" class="img-fluid" srcset="" src="">
+            <img id="img" alt="Rectangle10" class="img-fluid" srcset="" src="">
         </div>
     </div>
 `;
@@ -30,8 +30,9 @@ class Character extends HTMLElement {
 
     constructor() {
         super();
-        const countElements = 4;
-        this.createTemplate(countElements);
+        const countElementsWeb = 4;
+        const countElementsMovil = 2;
+        this.createTemplate(countElementsWeb, countElementsMovil);
     }
 
     addStyle(init) {
@@ -42,7 +43,7 @@ class Character extends HTMLElement {
         init.appendChild(main.cloneNode());
     }
 
-    createTemplate(countElements) {
+    createTemplate(countElementsWeb, countElementsMovil) {
         //create element
         const init = this.attachShadow({mode: 'closed'});
         this.addStyle(init);
@@ -53,15 +54,23 @@ class Character extends HTMLElement {
 
                 characters.forEach(function (c) {
                     //validate number of element
-                    if (countElements <= 0) {
+                    if (countElementsWeb <= 0) {
                         return;
                     }
-                    countElements--;
+                    countElementsWeb--;
+
+                    //responsive class
+                    if (countElementsMovil <= 0) {
+                        characterTemplate.content.getElementById("divMain").setAttribute("class", "col-6 col-sm-3 col-md-3 col-xl-3 col-lg-3 position-relative d-none d-sm-block d-md-block");
+                    } else {
+                        characterTemplate.content.getElementById("divMain").setAttribute("class", "col-6 col-sm-3 col-md-3 col-xl-3 col-lg-3 position-relative");
+                    }
+                    countElementsMovil--;
 
                     //edit and add element
                     characterTemplate.content.getElementById("name").textContent = c.name;
-                    characterTemplate.content.getElementById("imgCharacter").srcset = c.img;
-                    characterListTemplate.content.getElementById("listCharacter").appendChild(characterTemplate.content.cloneNode(true));
+                    characterTemplate.content.getElementById("img").srcset = c.img;
+                    characterListTemplate.content.getElementById("list").appendChild(characterTemplate.content.cloneNode(true));
                 });
 
 
