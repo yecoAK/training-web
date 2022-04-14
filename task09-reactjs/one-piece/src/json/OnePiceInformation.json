@@ -1,0 +1,138 @@
+{
+    "islands": [
+        {
+            "name": "Dawn Island",
+            "description": "Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.",
+            "Location": "East Blue",
+            "img": "img/islands/Rectangle121.png"
+        },
+        {
+            "name": "Reverse Mountain",
+            "description": "Reverse Mountain is an extremely tall mountain at one of the points where the four Blues meet and is one of the two known entrances to the Grand Line. It is located in the Red Line and is the geographical antipode of Mary Geoise.",
+            "Location": "Red Line",
+            "img": "img/islands/Rectangle121.png"
+        },
+        {
+            "name": "Marineford",
+            "description": "MarineFord was the island of the base of operations for Marine Headquarters, where now the Marine Base G-1 is situated. It is where former Fleet Admiral Sengoku and the admirals resided, along with many vice admirals and lower officers when they weren't assigned to another base.",
+            "Location": "Paradise",
+            "img": "img/islands/Rectangle12.png"
+        },
+        {
+            "name": "Water 7",
+            "description": "There are water-ways and canals that are used for transportation almost like roads, often surrounded by sidewalks on the canals. Many citizens use Bulls which are seahorse-like creatures that are attached to boats to move around the city. Also, some shops rent bulls of various sizes, although they rarely rent King Bulls as they are gigantic in size.",
+            "Location": "Paradise",
+            "img": "img/islands/Rectangle12.png"
+        },
+        {
+            "name": "Little Garden",
+            "description": "Little Garden is a Prehistoric Island and as such is still in the age of the Dinosaurs. Not much is known about Little Garden, other than it seems to develop very slowly. Due to the extreme climate and dangers of the dinosaurs and the duels between Dorry and Brogy.",
+            "Location": "Paradise",
+            "img": "img/islands/Rectangle12.png"
+        },
+        {
+            "name": "Amazon Lily",
+            "description": "Amazon Lily is a jungle island located within the Calm Belt. Due to the island's location, there is no wind or storm ever on Amazon Lily. The focal point of the island is a large mountain situated in the center. It is carved with gigantic curved snake statues and the name of the native tribe of the island, Kuja, engraved in Kanji.",
+            "Location": "Calm Belt",
+            "img": "img/islands/Rectangle12.png"
+        },
+        {
+            "name": "Zou",
+            "description": "Zunesha is a massive, living, and sentient elephant; as a result, it cannot be tracked by a Log Pose or Eternal Pose like regular islands can,[5] with only Vivre Cards as a way to track it.[8] Having walked through the New World for over 1,000 years.",
+            "Location": "New World",
+            "img": "img/islands/Rectangle12.png"
+        }
+
+    ],
+    "characters": [
+        {
+            "name": "Monkey D. Luffy ",
+            "description": "Luffy also known as Straw Hat Luffy and commonly as Straw Hat, is the main protagonist of the manga and anime, One Piece. He is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as one of its top fighters.",
+            "skills": [
+                "Haki",
+                "Gomu Gomu no Mi"
+            ],
+            "band": "Straw Hat Pirates",
+            "img": "../../../assets/img/character/Rectangle4.png"
+        },
+        {
+            "name": "Roronoa Zoro",
+            "description": "Zoro also known as Pirate Hunter Zoro, is the combatant of the Straw Hat Pirates, and one of their two swordsmen. Formerly a bounty hunter, he is the second member of Luffy's crew and the first to join it, doing so in the Romance Dawn Arc.",
+            "skills": [
+                "Haki",
+                "Sworddman"
+            ],
+            "band": "Straw Hat Pirates",
+            "img": "../../../assets/img/character/Rectangle8.png"
+        },
+        {
+            "name": "Portgas D .Ace",
+            "description": "He was the adoptive older brother of Monkey D. Luffy and Sabo, and the son of the late Pirate King Gol D. Roger and his late lover Portgas D Rouge. He was adopted by Monkey D. Garp as wished by Roger to him before his birth",
+            "skills": [
+                "Hiken",
+                "Higan"
+            ],
+            "band": "White beard",
+            "img": "../../../assets/img/character/Rectangle6.png"
+        },
+        {
+            "name": "Nico Robin",
+            "description": "At a young age, Robin acquired a bounty of Beli.png79,000,000 for having the ability to read Poneglyphs, which told of the Void Century",
+            "skills": [
+                "Tactical Skills",
+                "Miscellaneous Skills"
+            ],
+            "band": "Mugiwara",
+            "img": "../../../assets/img/character/Rectangle10.png"
+        },
+        {
+            "name": "Red-Haired Shanks",
+            "description": "Shanks is a former member of the legendary Roger Pirates, the only pirate band to successfully conquer the Grand Line, starting out his pirate career on said crew as an apprentice alongside Buggy before forming his own crew after Gol D. Roger's death.",
+            "skills": [
+                "Haki",
+                "Sworddman"
+            ],
+            "band": "Red Hair Pirates",
+            "img": "../../../assets/img/character/Rectangle4.png"
+        },
+        {
+            "name": "Gol D. Roger",
+            "description": "Ace was adopted by Monkey D. Garp, as had been requested by Roger before his execution. Ace was the 2nd division commander of the Whitebeard Pirates.",
+            "skills": ["Haki"],
+            "band": "Roger Pirates",
+            "img": "../../../assets/img/character/Rectangle8.png"
+        }
+
+    ],
+    "mysticObjects": [
+        {
+            "name": "Poneglyph",
+            "origen": "Wano",
+            "description": "The Poneglyphs are large, mysterious steles with historical knowledge inscribed on them in an ancient script. They are scattered among the islands across the world.",
+            "location": "Worldwide",
+            "img": "img/mistObjects/Rectangle12_3.png"
+        },
+        {
+            "name": "Log Pose",
+            "origen": "Unknown",
+            "description": "The standard Log Pose is a bracelet with a glass orb sitting on top, and a needle floating inside the middle of that orb suspended from the top by a thin piece of wire.",
+            "location": "Worldwide",
+            "img": "img/mistObjects/Rectangle12_3.png"
+        },
+        {
+            "name": "Den Den Mushi",
+            "origen": "Unknown",
+            "description": "Den Den Mushi have the mysterious ability to telepathically communicate with each other over vast distances, apparently through electronic signals; they can also perfectly mimic human speech, even imitating people voices.",
+            "location": "Worldwide",
+            "img": "img/mistObjects/Rectangle12_3.png"
+        },
+        {
+            "name": "Dials",
+            "origen": "Skypiea",
+            "description": "Dials are strange, mysterious devices made from the remains of particular shellfish, which have the ability to store energy and matter. The shellfish remains are gathered from the shallows near the shore of the White-White Sea.",
+            "location": "Worldwide",
+            "img": "img/mistObjects/Rectangle12_3.png"
+        }
+
+    ]
+}
