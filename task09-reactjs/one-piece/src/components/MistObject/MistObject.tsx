@@ -3,6 +3,8 @@ import './MistObject.scss'
 import Object from "./Object/Object";
 import {getElementPage} from "../createObj";
 import OnePiceInformation from "../../json/OnePiceInformation.json";
+import {Link} from "react-router-dom";
+import React from "react";
 
 
 function MistObject() {
@@ -20,7 +22,7 @@ function MistObject() {
         <div id="MistObjects">
             <div className="row">
                 <div className="col-6 text-start"><h4>Mist Object</h4></div>
-                <div className="col-6 text-end"><a href="mist-objects.html">See all</a></div>
+                <div className="col-6 text-end"><Link to="/mistObjectPage">See all</Link></div>
             </div>
 
             <div className="row contentMistObjets" id="list">

@@ -3,6 +3,8 @@ import './Islands.scss'
 import Island from "./Island/Island";
 import OnePiceInformation from '../../json/OnePiceInformation.json'
 import {getElementPage} from '../createObj'
+import {Link} from "react-router-dom";
+import React from "react";
 
 function Islands() {
 
@@ -18,11 +20,10 @@ function Islands() {
 
 
     return (
-
         <div id="islands">
             <div className="row">
                 <div className="col-6 text-start"><h4>Islands</h4></div>
-                <div className="col-6 text-end"><a href="islands.html">See all</a></div>
+                <div className="col-6 text-end"><Link to="/islandsPage">See all</Link></div>
             </div>
 
             <div className="row" id="list">
@@ -32,7 +33,7 @@ function Islands() {
                             key={item.name}
                             name={item.name}
                             Location={item.Location}
-                            img={item.img.toString()}
+                            img={item.img}
                             class={item.class}/>
                     })
                 }

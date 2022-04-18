@@ -1,8 +1,5 @@
 import React from "react";
-// import {Link, Route, Routes} from "react-router-dom";
-// import Home from "../pages";
-// import Contact from "../pages/Contact";
-// import About from "../pages/About";
+import {Link} from "react-router-dom";
 
 import './Menu.scss'
 
@@ -21,19 +18,19 @@ function Menu() {
                     <input className="side-menu" type="checkbox" id="side-menu"/>
                     <label className="hamb" htmlFor="side-menu"><span className="hamb-line"/></label>
 
-                    <a href="index.html">
+                    <Link to="/">
                         <img alt="logo1" className="d-none d-sm-none d-md-block" srcSet={logo1}
                              src=""/>
                         <img alt="logo1" className="mainIcon d-block d-sm-block d-md-none"
                              srcSet={logo2} src=""/>
-                    </a>
+                    </Link>
 
                     <nav className="nav">
                         <ul className="menu">
-                            <li><a href="index.html" className="menu active">Home</a></li>
-                            <li><a href="characters.html">Character</a></li>
-                            <li><a href="islands.html">Inslands</a></li>
-                            <li><a href="mist-objects.html">Mist Object</a></li>
+                            <li><Link to="/" className="menu active">Home</Link></li>
+                            <li><Link to="/charactersPage">Character</Link></li>
+                            <li><Link to="/islandsPage">Islands</Link></li>
+                            <li><Link to="/mistObjectPage">Mist Object</Link></li>
 
                             <div className="ps-2 d-flex justify-content-center">
                                 <div className="languageMovile active text-center d-block d-sm-block d-md-none">
@@ -61,18 +58,6 @@ function Menu() {
 
                 </div>
             </div>
-
-            {/*<nav>*/}
-            {/*    <Link to="/home">home</Link> |{" "}*/}
-            {/*    <Link to="/contact">contact</Link> |{" "}*/}
-            {/*    <Link to="/about">about</Link>*/}
-            {/*</nav>*/}
-
-            {/*<Routes>*/}
-            {/*    <Route path="home" element={<Home/>}/>*/}
-            {/*    <Route path="contact" element={<Contact/>}/>*/}
-            {/*    <Route path="about" element={<About/>}/>*/}
-            {/*</Routes>*/}
         </div>
     )
 }

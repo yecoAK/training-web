@@ -1,4 +1,3 @@
-import Rectangle6 from '../../../assets/img/islands/Rectangle12.png'
 import geo from '../../../assets/img/icon/geo.png'
 
 function Island(props: any) {
@@ -12,7 +11,8 @@ function Island(props: any) {
                     <span id="Location"> {props.Location}</span>
                 </div>
             </div>
-            <img id="img" alt="Rectangle8" className="img-fluid" srcSet={Rectangle6} src=""/>
+            <img id="img" alt="Rectangle8" className="img-fluid" srcSet={require('../../../assets/img/islands/' + props.img)} src=""/>
+
         </div>
     )
 }

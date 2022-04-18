@@ -14,7 +14,7 @@ function Character(props: any) {
                 <div id="name">{props.name}</div>
             </div>
             <div className="pickgradient">
-                <img id="img" alt="Rectangle10" className="img-fluid" srcSet={Rectangle4} src=""/>
+                <img id="img" alt="Rectangle10" className="img-fluid" srcSet={require('../../../assets/img/character/' + props.img)} src=""/>
             </div>
         </div>
     )
