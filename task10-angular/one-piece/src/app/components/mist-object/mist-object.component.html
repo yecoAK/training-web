@@ -1,0 +1,20 @@
+<div id="MistObjects">
+    <div class="row">
+        <div class="col-6 text-start"><h4>Mist Object</h4></div>
+        <div class="col-6 text-end"><a [routerLink]="['/mistObjectPage']">See all</a></div>
+    </div>
+
+    <div class="row contentMistObjets" id="list">
+
+        <div id="divMain" [ngClass]="i.class" *ngFor="let i of mysticObjects">
+            <div class="mt-2"></div>
+            <div class="mistObjText">
+                <div class="textDivImg mt-2" id="name">{{i.name}}</div>
+                <div class="mt-2"></div>
+                <div class="textDivImg" id="desc">{{i.description}}</div>
+            </div>
+            <img alt="Rectangle4" id="img" class="img-fluid" [srcset]="'assets/img/mistObjects/' + i.img" src=""/>
+        </div>
+
+    </div>
+</div>

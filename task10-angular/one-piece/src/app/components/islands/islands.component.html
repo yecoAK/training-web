@@ -1,0 +1,20 @@
+<div id="islands">
+    <div class="row">
+        <div class="col-6 text-start"><h4>Islands</h4></div>
+        <div class="col-6 text-end"><a [routerLink]="['/islandsPage']">See all</a></div>
+    </div>
+
+    <div class="row" id="list">
+        <div id="divMain" [ngClass]="i.class" *ngFor="let i of islands">
+            <div class="islandsText d-flex flex-column justify-content-center textGeneral">
+                <div class="textDivImg"><span class="islandsTextHeader" id="name">{{i.name}}</span></div>
+                <div class="textDivImg">
+                    <img alt="Rectangle4" class="img-fluid" srcSet="assets/img/icon/geo.png" src=""/>
+                    <span id="Location">{{i.Location}}</span>
+                </div>
+            </div>
+            <img id="img" alt="Rectangle8" class="img-fluid" [srcset]="'assets/img/islands/' + i.img" src=""/>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="islands">
+    <div class="row">
+        <div class="col-6 text-start"><h4>Character</h4></div>
+        <div class="col-6 text-end"><a [routerLink]="['/charactersPage']">See all</a></div>
+    </div>
+
+    <div class="row" id="list">
+        <div id="divMain" [ngClass]="i.class" *ngFor="let i of characters">
+            <div class="characterText textGeneral d-flex flex-column justify-content-center">
+                <div id="name">{{i.name}}</div>
+            </div>
+            <div class="pickgradient">
+                <img id="img" alt="Rectangle10" class="img-fluid" [srcset]="'assets/img/character/' + i.img" src=""/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,212 @@
+.iconSearchInput {
+  background: url('assets/img/icon/search.png') no-repeat left;
+  padding: 0.575rem 0.75rem 0.575rem 40px;
+  background-position-x: 8px;
+}
+
+.mistObjText {
+  position: absolute;
+  right: 1px;
+  height: calc(100% - (1rem * 0.5));
+  width: 63%;
+  background-color: rgba(0, 96, 150, 0.59);
+  z-index: 1;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.textDivImg {
+  color: white;
+  margin-left: 20px;
+}
+
+.boxSipnosis {
+  font-size: 16px;
+  border-right: rgba(145, 201, 238, 0.3) 1px solid;
+  border-bottom: rgba(145, 201, 238, 0.3) 1px solid;
+  border-top: rgba(145, 201, 238, 0.3) 1px solid;
+  left: -12px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(145, 201, 238, 0.3);
+}
+
+.boxSipnosisMovil {
+  padding: 10px;
+  border: rgba(145, 201, 238, 0.3) 1px solid;
+  box-shadow: 1px 1px 1px rgba(145, 201, 238, 0.3);
+  position: relative;
+  top: -50px;
+  z-index: 1;
+  background-color: white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.boxSipnosisMovilBtn {
+  color: #0C75AF;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: default;
+  }
+}
+
+hr {
+  background-color: rgba(145, 201, 238, 0.9);
+  border: rgba(145, 201, 238, 0.9) 1px solid;
+}
+
+.mainImg {
+  width: calc(100vh);
+}
+
+.islandsText {
+  position: absolute;
+  bottom: 12px;
+  height: calc(25%);
+  margin-left: calc(6%);
+  width: calc(80%);
+  background-color: rgba(0, 96, 150, 0.59);
+  z-index: 1;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+
+.characterText {
+  position: absolute;
+  bottom: 18px;
+  width: 85%;
+  z-index: 1;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.pickgradient {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, #000000 100%);
+    mix-blend-mode: multiply;
+    border-radius: 16px;
+  }
+}
+
+
+.mainIcon {
+  margin-top: 19px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.islandsTextHeader {
+  font-family: 'Roboto Slab', serif;
+}
+
+@media (min-width: 320px) {
+  .islandsTextHeader {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 420px) {
+  .islandsTextHeader {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 576px) {
+  .textGeneral {
+    font-size: 12px;
+  }
+
+  .boxSipnosis {
+    font-size: 12px;
+  }
+
+  .textDivImg {
+    font-size: 13px;
+  }
+
+  .islandsTextHeader {
+    font-size: 13px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .textGeneral {
+    font-size: 15px;
+  }
+
+  .boxSipnosis {
+    font-size: 11px;
+  }
+
+  .textDivImg {
+    font-size: 13px;
+  }
+
+  .islandsTextHeader {
+    font-size: 13px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .boxSipnosis {
+    font-size: 16px;
+  }
+
+  .textDivImg {
+    font-size: 18px;
+  }
+
+  .islandsTextHeader {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1140px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .textGeneral {
+    font-size: 22px;
+  }
+
+  .textDivImg {
+    font-size: 18px;
+  }
+
+  .islandsTextHeader {
+    font-size: 18px;
+  }
+}
