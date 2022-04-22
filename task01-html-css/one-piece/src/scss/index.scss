@@ -7,7 +7,7 @@
 .mistObjText {
   position: absolute;
   right: 1px;
-  height: 100%;
+  height: calc(100% - (1rem * 0.5));
   width: 63%;
   background-color: rgba(0, 96, 150, 0.59);
   z-index: 1;

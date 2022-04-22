@@ -29,7 +29,7 @@ function clear() {
 // JS function 
 
 function js() {
-    const source = './src/js/*.js';
+    const source = './src/js/**/*.js';
 
     return src(source)
         .pipe(changed(source))
@@ -62,7 +62,6 @@ function css() {
 }
 
 
-
 function img() {
     return src('./src/img/**/*{jpg,png}')
         .pipe(imagemin())
@@ -85,15 +84,21 @@ function lib() {
         .pipe(dest('./dist/lib/'));
 }
 
+function json() {
+    return src('./src/json/**/*.json')
+        .pipe(dest('./dist/json/'));
+}
+
 // Watch files
 
 function watchFiles() {
-    watch('./src/scss/*', css);
-    watch('./src/js/*', js);
+    watch('./src/scss/**/*', css);
+    watch('./src/js/**/*.js', js);
     watch('./src/img/*', img);
     watch('./src/font/*', fonts);
     watch('./src/*.html', html);
     watch('./src/lib/*', lib);
+    watch('./src/json/*', json);
 }
 
 // BrowserSync
@@ -110,4 +115,4 @@ function browserSync() {
 // Tasks to define the execution of the functions simultaneously or in series
 
 exports.watch = parallel(watchFiles, browserSync);
-exports.default = series(clear, parallel(js, css, img, fonts, html, lib));
+exports.default = series(clear, parallel(js, css, img, fonts, html, lib, json));
