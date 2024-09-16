@@ -1,0 +1,48 @@
+
+const gulp = require('gulp');
+var nodemon = require('gulp-nodemon');
+
+gulp.task('start', function (done) {
+    nodemon({
+        script: 'src/nodeJS/server.js'
+        , ext: 'js html'
+        , env: { 'NODE_ENV': 'development' }
+        , done: done
+    })
+})
+
+
+
+exports.watch = parallel(watchFiles, browserSync, 'start');
+exports.default = series(clear, parallel(js, css, img, fonts, html, lib, json, 'start'));
+
+
+
+    "express": "^4.17.3"
+       "gulp-nodemon": "^2.5.0",
+
+
+
+
+
+
+**server
+
+var express = require('express') //llamamos a Express
+var OnePiceInformation = require('./OnePiceInformation.json');
+
+var app = express()
+
+var port = process.env.PORT || 8080  // establecemos nuestro puerto
+
+app.get('/', function(req, res) {
+    res.json({ mensaje: 'API ONE PIECE' })
+})
+
+app.get('/OnePiceInformation', function(req, res) {
+    res.json({ mensaje: OnePiceInformation })
+})
+
+
+app.listen(port)
+console.log('API escuchando en el puerto ' + port)
